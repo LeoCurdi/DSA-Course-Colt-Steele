@@ -1,0 +1,44 @@
+
+How to solve a complex problem
+1. understand the problem
+2. explore concrete examples
+3. break it down
+4. solve/simplify
+5. look back and refactor
+
+
+
+1. understand the problem
+	- make sure you understand every aspect of the problem before you ever touch code or a whiteboard
+	- ask clarifying questions, make sure you can re state the problem back in your own words
+	- determine the inputs and outputs, and if the outputs are attainable from the inputs, aka is the problem solveable
+	- how should  I label the pieces of data in the solution
+2. explore concrete examples
+	- examples provide sanity checks because you'll know if your solution is working for certain example cases
+	- make examples by choosing inputs and manually determine the output. start simple then move to complex edge cases
+		- ask about empty or invalid inputs
+3. break it down
+	- outline a guide for the steps you need to take (aka communicate your thougth process to the interviewer. 
+	  Ex: "im thinking about doing x/y/z, does that make sense?". you can actually get helpful feedback from the 
+	  interviewer this way and get points for communication at the same time
+	- write pseudo code. start with a function header with inputs, then comment steps.
+	  Be very specific with the pseudo code to the point where you just have to fill in the blanks, and
+	  the interviewer can see that you know how to solve it even if you get stuck on some syntax or miss an edge case or run out of time
+	  An interview question is all about seeing your process - a lot of times these q's are m,eant to be so long that you dont finish
+	- Never get started without a plan hoping that the rest of the strategy will come magically becasue you may pigeonhole yourself and have to start over
+4. solve/simplify
+	- solve the problem if you can, but if you get stuck, solve a simpler version of the problem.
+	  Choose to ignore the part thats getting you stuck and solve the rest so that you have something to show for it
+	- Working this step can cause you to realize an actual solution along the way
+	- Once you've solved a simpler version of the problem, you can start spitballing and get help from the interviewer
+	- in an interview if you get 90% of the solution and you can explain what you're stuck on, you've done a good job of showing your problem solving process
+5. look back and refactor
+	- Once you have something that does what it needs to, you might be able to get by, but it's really important to strive for improvements
+	- If you don't take the time to improve your code it's a missed opportunity
+	- address parts that you dont like or could be done differently/better/faster
+	- look at time and space complexity, plus neatness, clarity, and readability of code
+	- Sometimes you might end up not making changes, but it's still worth reflecting on it to further demonstrate your process
+	- If you suspect something would be better done a different way but you don't know or cant write it off top, 
+	  mention "i think xyz could be better but idk so i would probably google it" 
+
+ 

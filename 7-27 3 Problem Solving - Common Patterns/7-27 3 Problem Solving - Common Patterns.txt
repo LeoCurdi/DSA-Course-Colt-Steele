@@ -1,0 +1,9 @@
+
+Note: these patterns will not solve all problems, but they will help sove some of the most frequent ones
+
+Patterns:
+
+- Frequency Counters
+	- uses objects or sets to collect values or frequencies of values
+	- can avoid nested loops
+	- Ex: 
