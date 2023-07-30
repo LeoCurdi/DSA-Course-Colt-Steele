@@ -201,4 +201,79 @@
     }
 
 
+/* 
+    Sliding window - min sub array length
+    Write a function called minSubArrayLen which accepts two parameters - an array of 
+    positive integers and a positive integer.
+    This function should return the minimal length of a contiguous subarray of which the 
+    sum is greater than or equal to the integer passed to the function. If there isn't one, 
+    return 0 instead.
+*/
+    function minSubArrayLen(arr, n) {
+        // no sorting - must be o(n)
+
+        // start with 2 ptrs at index 0
+        let l = 0, r = 0, result = Infinity, sum = 0
+
+        // traverse until end of array
+        while (l < arr.length) {
+            // if the window is less than n, make it bigger and adjust sum
+            if (sum < n && r < arr.length) { // short circuit
+                sum += arr[r]
+                r++
+            }
+
+            // if the window is >= n, make it smaller and adjust sum
+            else if (sum >= n) {
+                // update result
+                if (r - l < result) result = r - l
+
+                sum -= arr[l]
+                l++
+            }
+
+            // in case sum is less than n and we reach end of array
+            else {
+                break
+            }
+        }
+
+        // check if result is real before returning it
+        return result === Infinity ? null : result // if result was never modified, we didnt find a subarray
+    }
+
+
+/*
+    sliding window - find longest substring
+    Write a function called findLongestSubstring, which accepts a string and returns 
+    the length of the longest substring with all distinct characters.
+*/
+    function findLongestSubstring(string) {
+        // cant sort
+        // gonna need an object to track frequency
+        // increase the window until we get the logest substring, then only increase it when we get a new long substring
+        // so we never need to shrink the window
+        let freq = {}
+        let longest = 0
+        let l = 0, r = 0
+
+        // traverse through the string
+        while (r < string.length) { // when r reaches end, we're done because shrinking the window would give us a smaller substring then the current longest
+            // if the next char doesnt exist in frequency table, increase length of substring
+            if (!freq[string[r]]) {
+                freq[string[r]] = 1
+                r++
+                // update result
+                if (r - l > longest) longest = r - l
+            }
+
+            // else decrease length of substring. this can be refactored out somehow since we shouldnt need to decrease size of window ever
+            else {
+                freq[string[l]]--
+                l++
+            }
+        }
+
+        return longest
+    }
 
