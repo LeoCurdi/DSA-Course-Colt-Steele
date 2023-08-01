@@ -4,3 +4,14 @@
 	- selection sort is better than bubble when you dont want to make as many swaps (uncommon)
 	- insertion sort is really good when the array is almost sorted, and when youre adding new data to an already sorted array
 	- more complex algos are typically more efficient, but the 'quadratic' ones can be better with small data sets
+	- quick sort runs into trouble wheny you have a sorted array and you're picking the start or end index as the pivot as it will have to partition n times, making it o(n*n)
+
+- all the above sorts are 'comparison sorts'. there is a mathematical bound based on how much info we can gain from a comparison that these sorts can never be faster than o(nlogn)
+  There are other type of algos that can be faster than o(nlogn), but the catch is that they arent comparison sorts.
+  They take advantage of certain quirks of data sets to get more information, and as a result dont work on all data
+	- Radix sort is an 'integer sort' and only works on integer data. (Note: it could work on decimals if they are given in binary)
+	  It exploits the fact that the number of digits gives you info on the size of the number
+	- big O (debated, but this is generally accepted): time(best, avg, and worst): O(nk) where k is the max number of digits. space: O(n + k)
+		- k can frequently be >= logn, making radix average more like O(nlogn). so radix could be tied with comparison sorts, but its still really cool
+
+

@@ -1,0 +1,34 @@
+
+- singly linked big O:
+	- insertion - o(1)
+	- removal - o(1) or o(n) (bc we may need to traverse)
+	- searching - o(n)
+	- access - o(n)
+	Singly linked lists excell at insertion and removal vs arrays
+
+- doubly linked:
+	- takes more memory than singly linked since were storing a previous pointer
+	  Typically in programming you will gain flexibility and functionality at the cost of memory
+	- insertion - o(1)
+	- removal - o(1) (no need to traverse when we have pointers going both ways)
+	- searching - o(n) (optimized to o(n/2) bc we can search from either side)
+	- access - o(n)
+	Doubly linked lists excell when you need to access data in reverse order - this would be n^2 with a singly linked lists
+
+- stacks: LIFO
+	- used for undo/redo, function calls, etc
+	- insertion - o(1)
+	- removal - o(1)
+	- searching - o(n)
+	- access - o(n)
+	All we care about with a stack is insertion and removal, if we want search and access we would use a different data structure
+
+- queues: FIFO
+	- used for lines etc
+	- insertion - o(1)
+	- removal - o(1)
+	- searching - o(n)
+	- access - o(n)
+	All we care about with a queue is insertion and removal, if we want search and access we would use a different data structure
+
+

@@ -1,0 +1,3 @@
+
+Data structures in modern JS are typically implemented using classes
+

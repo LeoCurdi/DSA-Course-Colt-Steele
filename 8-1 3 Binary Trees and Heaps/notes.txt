@@ -1,0 +1,33 @@
+
+- BST:
+	- insertion - o(logn)
+	- searching - o(logn)
+	A lot better than something like a linked list with o(n)
+	*Note: o(logn) is not gauranteed bc a tree can be unbalanced, which would make it o(n)
+
+- BST Traversal:
+	- breadth first search vs depth first search
+	- time complexity of either is the same - were visiting each node once
+	- more space may be used up in breadth first search on a wide tree since you're queuing up a bunch of stuff
+	  however more space may be used in depth first search if its a deep tree since you're filling up the function call stack
+	- DFS - pre vs in vs post: pre could be useful to clone or flatten a tree, in is good for getting data in order
+		- typically we will use in order, the main question is do we use depth search or breadth search
+
+- Max/Min Binary Heaps:
+	- looks like a binary tree, excpet theres no regulation on left child vs right child
+	  so left child could be bigger than right child
+	- the only rule is parents are always bigger (or smaller if min heap) than children
+	- its impossible to get an unbalanced heap, nodes are always inserted into the first empty space from left to right
+	- used for priority queues etc
+	- heaps are typically implemented using an array
+
+- Heap Big O:
+	- insertion - o(logN)
+	- removal o(logN)
+	- search - o(N) (you wouldn't use a heap if you want to be able to search)
+	- Unlike with trees, heaps do not have an o(N) worst case as they cant be unbalanced
+
+- Priority Queue:
+	- a data structure where each element has a priority. elements are served based on priority. (think: someone walks into ER with a gunshot wound and gets to jump up in the queue)
+	- best implemented using a heap with an array of nodes that have a value and a priority
+
