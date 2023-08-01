@@ -1,0 +1,7 @@
+
+- it uses unicode by default so it typically wont sort the way you want unless youre sorting strings
+- to make it work right, you need to give it parameters
+	function compare(num1, num2) {
+		return num1 - num2 // this is where you tell js how you want stuff sorted. this will sort smallest to largest
+	}
+	array.sort(compare)

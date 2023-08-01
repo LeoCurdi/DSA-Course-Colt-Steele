@@ -1,0 +1,6 @@
+
+- some algos are more efficient in specific scenarios such as when an array is almost sorted
+	- bubble can be a little more efficent on almsot sorted arrays as it can be optimized to check when it doesnt do any swaps
+	- selection sort is better than bubble when you dont want to make as many swaps (uncommon)
+	- insertion sort is really good when the array is almost sorted, and when youre adding new data to an already sorted array
+	- more complex algos are typically more efficient, but the 'quadratic' ones can be better with small data sets
