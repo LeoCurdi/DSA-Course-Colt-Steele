@@ -1,0 +1,30 @@
+
+A graph in computer science is basically just a graph from discrete structures with edges and vertices
+
+Types of graphs:
+- Tree: a graph but there is only 1 possible path between any 2 vertices
+- Undirected graph: all edges are 2-way / non directional (ex: facebook friends)
+- Directed graph: (often represented with arrows) means edges are 1-way (ex: instagram followers). Note edges can be 2-way and they will have 2 arrows
+- Weighted graph: has values on each edge (ex: google maps calculating fastest route with traffic as weights)
+
+
+There are 2 main ways of storing edges and vertices in a graph:
+- adjacency matrix: a 2D structure usually implemented with arrays where we store rows and columns
+- adjacency list: a list (usually a hash table) of pairs of vertices that are connected. ex: a-b is [a,b], b-a is [b,a]
+Time and space complexities:
+	- list can take up less space when you dont have max amount of edges (aka. data is sparce) (matrix takes up v^2 space where v is number of vertices)
+	- list is faster to iterate over all edges (matrix will have to iterate over empty slots (non existent edges))
+	- list is slower to look up a specific edge - constant time for matrix, but o(v + e) for list
+
+
+Graph Traversal:
+Note: graph traversal is a common interview topic, because it has many real world applications
+- Unlike trees which have only one path between any 2 nodes, graphs may have multiple routes to get between nodes
+  because of this, traversing involves backtracking, revisiting nodes, etc
+- depth first here means were traversing away from the root asap, 
+  whereas breadth first is more like hitting all closest nodes before moving further away from root
+- We have to keep track of what nodes we've already visited
+- We traverse graphs by queueing up nodes to be processed using recursion, a stack, or a queue, marking them as visited, 
+  and repeating with their 'neighbors' / connections 
+
+

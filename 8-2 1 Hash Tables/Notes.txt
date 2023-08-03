@@ -1,0 +1,21 @@
+
+- Hash tables are used to store key-value pairs. Like arrays, but not ordered/indexed
+- Hash tables are fast for finding, adding, and removing
+- If data isn't sequential, a hash map may be useful
+- Objects in JS are basically hash tables
+- This section is focused on how we can reinvent something like a js object 
+
+- We need a hash function to convert keys into integers which will be the index we store our value at
+	- hash function should be fast as we need to use it each time we go to access values in the array
+	- we also need the output to be small bc we dont want to store things at say index 1 trillion
+	- we want it to distribute stuff evenly throughout the array
+	- Note: this will not be a cryptographically secure hash function
+
+- big O:
+	- insert: o(1)
+	- deletion: o(1)
+	- access: o(1)
+	- As the hash table grows, time complexity does not grow because we have the instant access of indexing with an array, and dont need to search or insert in order because of hashing
+	- Hash function must distribute evenly for o(1) to hold up. if all data is inserted to the same index, you would have o(n) to traverse through it
+	- also the array must be big enough to hold all data and have little to no collisions
+	
