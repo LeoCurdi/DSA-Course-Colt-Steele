@@ -1,0 +1,15 @@
+
+Dijkstra's finds the shortest path between 2 nodes on a graph
+- Dijkstra's is weighted
+
+The algorithm will visit every node using every possible edge, and calculate the shortest path to 
+each node from the starting node. This means that once the algorithm is done running, it will not only
+have the shortest path to the destination node, but all nodes on the graph, as long as the graph doesn't change.
+This means you won't have to run the algo again if you want to see the shortest path for a different node
+
+Dijkstra's will be implemented with a priority queue and a weighted graph.
+There are 2 ways to implement the priority queue:
+	- A basic array: array must be sorted each time we insert a new node, making it O(NlogN)
+	- A max/min heap: array must be heapified each time we insert a new node, making it O(logN)
+	Heap is much more efficient, but we will implement 2 versions so we can see both
+*Note: We went with a min heap, because weight = priority and lower weight is shorter

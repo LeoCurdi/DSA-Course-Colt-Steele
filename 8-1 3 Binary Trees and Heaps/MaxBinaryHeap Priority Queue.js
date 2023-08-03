@@ -74,7 +74,7 @@ class PriorityQueue {
                     swap = leftChildIdx;
                 }
             }
-            // if right chuld exists
+            // if right child exists
             if(rightChildIdx < length){
                 // get value of right child
                 rightChild = this.values[rightChildIdx];

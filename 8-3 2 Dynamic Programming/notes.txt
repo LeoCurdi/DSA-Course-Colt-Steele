@@ -1,0 +1,21 @@
+
+What is dynamic programming?
+	A method for solving a complex problem by breaking it down into a collection of simpler subproblems, 
+	solving each of those subproblems just once, and storing their solutions.
+Basically just eliminating duplication when solving a problem.
+Most problems can't be solved with dynamic programming, but when you can use it you can really speed up your code.
+Think recursion, although not all problems that can be solved with recursion are candidates for dynamic programming.
+
+We can use dynamic programming when we have both:
+	- optimal substructure - the optimal can be constructed from optimal solutions of its subproblems
+		- Ex. fibonnaci sequence: the optimal solution for fib(5) depends on the optimal solutions to fib(4) and fib(3)
+		- Ex. shortest path algo: the shortest path to a node depends on the shortest path to its previous node in the path
+	- overlapping subproblems 
+		- Ex. fibonnaci sequence: the 5th = 4th + 3rd, and 4th = 3rd + 2nd. 
+		  You can see that subproblems 5th and 4th both use 3rd
+		- Note: just because we're using recursion, doesn't mean our subproblems are overlapping. 
+		  Ex. merge sort splits an array in half but each half has entirely unique elements. 
+		  Theres no duplication, so there's no way to optimize it
+
+
+
